@@ -1,0 +1,11 @@
+# confidence interval
+alpha = 0.05
+degrees.freedom = sample.n - 1
+t.score = MovieSamples(p=alpha/2, df=degrees.freedom,lower.tail=F)
+print(t.score)
+
+
+alpha = 0.05
+degrees.freedom = sample.n - 1
+t.score = AnimationRuntime(p=alpha/2, df=degrees.freedom,lower.tail=F)
+print(t.score)
