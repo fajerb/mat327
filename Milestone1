@@ -1,0 +1,14 @@
+getwd()
+
+# histogram for each genre and display their runtime distribution and runtime
+for( gen in genre_sort_names[1:10]){
+  hist(get(gen)[!is.na(get(gen)$Runtime), "Runtime"], main=paste("Histogram of", gen, "Runtime"), xlab="Runtime")
+    
+}
+
+
+#Histogram for Budget
+hist(runtime[!is.na(runtime$Budget), "Budget"], main=paste("Histogram of Budget"), xlab="Budget")
+
+#Historgram for Animation Runtime
+hist(runtime[!is.na(runtime$AnimationRunTime), "AnimationRunTime"], main=paste("Histogram of Animation RunTime"), xlab="Animation RunTime")
