@@ -1,0 +1,5 @@
+# a few ratings gets a scatterplot to figure out patterns
+for(rating in ratings){
+  plot(aggregate(get(rating)[,rating], list(get(rating)[,"wins"]), mean), type="o", xlab="wins", ylab=rating)
+  plot(aggregate(get(rating)[,rating], list(get(rating)[,"nominations"]), mean), type="o", xlab="nominations", ylab=rating)  
+}
