@@ -1,0 +1,14 @@
+
+
+
+#Remove outliers inside movies list 
+df=df[df$Type=="movie",]
+nrow(df)
+
+
+#Removing years that do not correspond with each other
+
+test=df[setdiff(rownames(df), rownames(df[is.na(df$Released),])),]
+test_match=test[abs((test$Year-as.numeric(substr(test$Released, 1, 4))))<=1,]
+test_dismatch=df[setdiff(rownames(df), rownames(df[rownames(test_match),])),]
+
