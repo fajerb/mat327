@@ -1,0 +1,17 @@
+Column 1 
+# mean, median, variance, standard deviation
+plot(aggregate(runtime[, "Runtime"], list(runtime$Year), mean), type="o")
+median(Runtime$Runtime)
+sd1 = data$Runtime    
+> sd(sd1)      
+
+
+
+
+
+Column 2 
+# mean, median, variance, standard deviation
+plot(aggregate(runtime[, "Animation Runtime"], list(AnimationRuntime$Year), mean), type="o")
+median(AnimationRuntime$AnimationRuntime)
+sd2 = data$Runtime    
+> sd(sd2)   
